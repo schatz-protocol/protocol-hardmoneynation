@@ -1,0 +1,75 @@
+
+/* ---- Adjusting spacing within header ---- */
+
+.section.top-rail .logo,
+.section.top-rail .contact {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.section.top-rail .contact a.phone {
+	/* pseudo vertical centering */
+    margin-top: 10px;
+}
+
+/* ---- Move Logo and Contact onto the same line ---- */
+
+.section.top-rail .logo {
+	float: left;
+}
+
+.section.top-rail .contact {
+	text-align: right;
+}
+
+/* ---- Control Width of Header ---- */
+
+.section.top-rail .container {
+	padding-left: 82px;
+	padding-right: 82px;
+	max-width: 1116px;
+	
+	/* center */
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Special breakpoint for content width. */
+@media screen and (min-width: 1149px) { /* eyeball */
+
+	.section.main .container {
+		max-width: 1116px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.section.main .container.limit_width {
+		max-width: 750px;
+	}
+
+}
+
+/* ---- Footer ---- */
+
+footer .container {
+	width: 768px;
+}
+
+@media (min-width: 1200px) {
+	footer .container {
+		width: 1120px;
+	}
+	
+	footer .col-md-6 {
+		float: left;
+	}
+	
+	footer .col-md-6:nth-child(1) {
+		width: 600px;
+	}
+	
+	footer .col-md-6:nth-child(2) {
+    	width: 400px;
+	}
+	
+}

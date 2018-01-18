@@ -1,0 +1,53 @@
+/* These are pieces gathered from various sources. */
+
+/* ---- Micro Clearfix Hack ---- */
+/* http://nicolasgallagher.com/micro-clearfix-hack/ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+
+/* ---- Equidistance Images ---- */
+/* https://css-tricks.com/centering-css-complete-guide/ */
+
+.center-aligned-images {
+	text-align: justify;
+}
+
+.center-aligned-images img {
+	display: inline-block;
+}
+
+.center-aligned-images:after {
+	content: '';
+	width: 100%;
+	display: inline-block;
+}
+
+/* Overwrite the justify in specific cases. */
+.center-aligned-images.single-image {
+	text-align: center;
+}
+
+
+/* Alternate to <nobr> */
+
+.nobr { white-space: nowrap; }
+
+
+
+/* ---- Webkit ---- */
+
+body {
+	/* Not sure how it works, but it fixes the "overly bold text" issue on Firefox Mac. */
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%;
+}

@@ -1,0 +1,382 @@
+/*
+ * Theme Name: Hardmoneynation
+ * Author: Dmitrii
+ * Author URI: http://goprotocol.com
+ * Version: 1.0
+ * Description: A set of landing pages for a hard money lending company.
+ */
+
+/*
+ * Uses progressive enhancements.
+ */
+
+/* The default font. */
+body {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 300;
+    color: #666666;
+}
+
+/* ---- TOP RAIL ---- */
+
+.section.top-rail {
+    background-color: #ffffff;
+}
+
+.section.top-rail .contact a.phone {
+    background-image: url('images/icons/phone.png');
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding-left: 45px; /* 31px image, + 12px space */
+
+    /* Kludge for centering. */
+    line-height: 31px;
+    display: inline-block;
+
+    /* Decorate the text. */
+    text-decoration: none;
+    color: #323232;
+    font-weight: bold;
+}
+
+.section.top-rail .contact a.button {
+    border-radius: 4px;
+    color: #ffffff;
+    padding: 8px 18px;
+
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.section.top-rail .contact .or {
+    color: #b0b0b0;
+    margin-left: 8px;
+}
+
+.section.top-rail .contact .button-container {
+    /* Padding is used instead of margin because margin doesn't seem to work.
+     *   That means there is probably some better CSS out there I don't know yet.
+     */
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+
+/* ---- The skyline background ---- */
+
+.section.main {
+    background-color: #f8f8f8;
+    background-repeat: no-repeat;
+
+    padding-top: 20px;
+    padding-bottom: 120px;
+
+    background-position: center bottom;
+}
+
+@media screen and (min-width: 769px) {
+    .section.main {
+	padding-top: 60px;
+	padding-bottom: 0; /* cancel */
+	min-height: 540px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .section.main {
+	padding-top: 60px;
+    }
+}
+
+/* ---- Text styling which applies to multiple pages. ---- */
+
+.section.main h2,
+.section.main h2.gray,
+.section.main h2.blue {
+    font-family: 'Roboto';
+    font-size: 40px;
+    line-height: 125%;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.section.main h2.gray {
+    color: #7b7b7b;
+}
+
+.section.main h2.blue {
+    color: #00a8ff;
+}
+
+ul.icon-bullet {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul.icon-bullet li {
+    background-image: url('images/veristone_16px.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 1.25em;
+
+    font-size: 18px;
+    line-height: 36px;
+}
+
+@media screen and (min-width: 769px) and (max-width: 800px) {
+    ul.icon-bullet li {
+	/* a minor adjustment, since some of the bullet text items are long */
+	letter-spacing: -0.25px;
+    }
+}
+@media screen and (min-width: 1040px) {
+    ul.icon-bullet li {
+	font-size: 24px;
+	line-height: 36px;
+    }
+}
+
+.other_uses {
+    text-align: center;
+    font-size: 175%;
+    font-weight: 300;
+    font-style: oblique;
+    margin-bottom: 0;
+}
+
+/* ---- FOOTER ---- */
+
+footer {
+    width: 100%;
+    padding: 10px 0 0 0;
+    background: #2d2d2d;
+    border-top: 4px solid; /* protocol color */
+}
+
+footer .footer-in {
+    margin: 0 auto;
+    padding-bottom: 50px;
+    color: #ccc;
+    position: relative;
+}
+
+footer .container:before,
+footer .container:after {
+    content: " ";
+    display: table;
+}
+
+footer .container:after {
+    clear: both;
+}
+
+footer .col-md-6 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+footer .widget {
+    height: auto;
+    padding: 0px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: normal;
+    clear: both;
+}
+
+footer .widget ul,
+footer .widget ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    letter-spacing: 0;
+}
+
+footer .widget ul {
+    margin-bottom: 10px;
+}
+
+footer .widget ul.menu li {
+    font-weight: 300;
+    list-style: none;
+    letter-spacing: 0;
+    padding: 8px 0;
+    border-color: #414141;
+    color: #aaaaaa;
+    font-family: 'Roboto';
+    font-size: 16px;
+    line-height: 26px;
+    display: inline-block;
+    width: 44%;
+    min-width: 180px;
+    margin-right: 30px;
+    border-bottom: 1px solid #212121;
+    -webkit-box-shadow: 0 1px #373737;
+    -moz-box-shadow: 0 1px #373737;
+    box-shadow: 0 1px #373737;
+}
+
+/*
+footer .footer-in .widget ul li:hover {
+    background: #272727;
+}
+
+footer .widget ul li a:hover {
+	padding-left: 6px;
+    background: none;
+    color: #d9d9d9;
+}
+*/
+
+footer h5 {
+    font-weight: 200;
+}
+
+footer .footer-in h5.subtitle {
+    color: #aaaaaa;
+    font-weight: 300;
+    font-family: 'Roboto';
+    font-size: 24px;
+    line-height: 34px;
+    padding-bottom: 35px;
+    margin: 35px 0 0 0;
+    border-bottom: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+footer .widget ul li a {
+    padding: 8px 5px 8px 0;
+    text-decoration: none;
+    background: none;
+    color: #a9a9a9;
+}
+
+footer .contact-inf span {
+    color: #aaaaaa ;
+    font-family: 'Roboto' ;
+    font-size: 16px ;
+    line-height: 22px ;
+    font-weight: 300;
+    padding: 10px 0 ;
+    border-bottom: 1px solid #212121;
+    -webkit-box-shadow: 0 1px #373737;
+    -moz-box-shadow: 0 1px #373737;
+    box-shadow: 0 1px #373737;
+    display: block;
+}
+
+footer .contact-inf span:first-child {
+    color: #aaaaaa;
+    font-family: 'Roboto';
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 300;
+    padding: 10px 0;
+    border-bottom: 1px solid #212121;
+    display: block;
+}
+
+footer .contact-inf i {
+    margin-right: 5px;
+    color: #aaaaaa;
+}
+
+footer .footbot {
+    margin: 0 auto;
+    position: relative;
+    background: #222;
+    padding: 18px 0px;
+    text-align: left;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 1px;
+}
+
+footer .footer-navi {
+    float: left;
+    line-height: 38px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #606060;
+    text-transform: capitalize;
+}
+
+footer .footer-navi a {
+    text-decoration: none;
+    outline: 0;
+    color: #a9b2b4;
+    margin: 0 4px;
+}
+
+footer .menu > li {
+    background-image: url('images/icons-footer/circle-right.png');
+    background-position: right 6px center;
+    background-repeat: no-repeat;
+}
+
+footer .copyright {
+    color: #ffffff;
+    line-height: 1em;
+    margin-top: 12px;
+}
+
+footer .footbot .outbound_link {
+    margin-left: 0;
+}
+
+/* ---- Footer CSS3 Animateion ---- */
+footer .widget ul.menu li {
+    transition: all .21s ease;
+}
+
+footer .widget ul.menu li a {
+    transition: all .07s ease;
+}
+
+
+
+
+/* ---- Awesome Horizontal Rule ---- */
+
+div.awesome_hr {
+    /* height of the symbol */
+    height: 18px;
+
+    /* The gap in the line is the image itself. */
+    background-image: url("images/awesome-hr-line.png");
+    background-repeat: repeat-x;
+    background-position: center center;
+}
+
+div.awesome_hr:before {
+    /* Necessary. Don't know why. */
+    content: '';
+    display: block;
+
+    background-image: url("images/missing/favicon.png");
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    filter: grayscale(100%) brightness(250%);
+
+    /* height of the symbol */
+    height: 18px;
+
+    /* center */
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/* Add some bottom spacing. */
+div.awesome_hr {
+    margin-bottom: 1em;
+}

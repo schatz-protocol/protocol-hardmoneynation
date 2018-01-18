@@ -1,0 +1,16 @@
+/* Code specific to the default theme (i.e. learn more) which is also
+/*   using a carousel. */
+
+.section.main {
+	padding-bottom: 70px;
+}
+
+@media screen and (min-width: 769px) {
+	.section.main {
+		padding-bottom: 160px;
+	}
+}
+
+#protocol_carousel {
+	padding-top: 32px;
+}

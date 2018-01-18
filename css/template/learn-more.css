@@ -1,0 +1,569 @@
+
+/* ---- Manage the banner image and text ---- */
+
+.section.banner {
+	background-repeat: no-repeat;
+	
+	background-image: url(../../images/banner/360px.jpg);
+	
+	/* This banner is set top/left so that
+	 * the title doesn't cover the actor's face. */
+	background-position: top left;
+	height: 113px;
+	
+	/* pseudo-vertical-center */
+	line-height: 113px;
+}
+
+.section.banner .container {
+	margin-left: 16px;
+	margin-right: 16px;
+}
+
+
+@media screen and (min-width: 769px) {
+
+	.section.banner {
+		background-image: url(../../images/banner/768px.jpg);
+		height: 225px;
+	
+		/* pseudo-vertical-center */
+		line-height: 225px;
+	}
+
+	.section.banner .container {
+		padding-left: 82px;
+		padding-right: 82px;
+		max-width: 1116px;
+	
+		/* center */
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media screen and (min-width: 1281px) {
+	.section.banner {
+		background-image: url(../../images/banner/1280px.jpg);
+		background-position: top center;
+	}
+}
+
+.section.banner h2 {
+	margin-top: 0;
+	margin-bottom: 0;
+	
+	color: #ffffff;
+	font-size: 40px;
+	font-weight: 300;
+}
+
+
+
+
+
+/* ---- Three Steps ---- */
+
+#three-steps > div {
+	display: table;
+	width: 33%;
+}
+
+#three-steps .step-1,
+#three-steps .step-2,
+#three-steps .step-3 {
+	display: table-cell;
+	height: 86px;
+	padding-left: 105px; /* 89px (img width) + 16px (padding) */
+	background-repeat: no-repeat;
+	background-position: left center;
+	
+	text-transform: uppercase;
+	vertical-align: middle;
+}
+
+#three-steps .step-1 {
+	background-image: url("../../images/icons-content/step-1.png");
+}
+
+#three-steps .step-2 {
+	background-image: url("../../images/icons-content/step-2.png");
+}
+
+#three-steps .step-3 {
+	background-image: url("../../images/icons-content/step-3.png");
+}
+
+/* ---- Styling of the table ---- */
+
+
+
+/* The old style, for pages which haven't been converted yet. */
+
+#two-col-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+/* All cells in this table are centered. */
+#two-col-table td,
+#two-col-table th {
+	text-align: center;
+}
+
+/* All header cells in this table have the same padding. */
+#two-col-table th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+/* (Roundabout way of saying) both columns are the same width. */
+#two-col-table th {
+	width: 50%;
+}
+
+/* All non-header cells in this table have the same padding. */
+#two-col-table td {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+/* The first column of each row is bold. */
+#two-col-table td:first-child {
+	font-weight: bold;
+}
+
+/* Make the table headings dark blue. */
+/* Increased specificity overrides zebra rows. */
+#two-col-table tr th {
+	background-color: #415167;
+	color: #ffffff;
+	
+	font-size: 23px;
+}
+
+/* Zebra rows */
+#two-col-table tr:nth-child(odd) { background-color: #fbfbfb; }
+#two-col-table tr:nth-child(even) { background-color: #ffffff; }
+
+
+
+/* CSS from the Florida-WP theme. */
+/* Note: this theme is not Florida-WP, even though it
+/*   looks like it. */
+
+table.florida {
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table.florida {
+  width: 100%;
+  /* margin-bottom: 18px; unused for Slim */
+}
+
+.table.florida th,
+.table.florida td {
+  padding: 8px;
+  line-height: 18px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px dotted #e5e5e5;
+}
+
+.table.florida th {
+  font-weight: bold;
+}
+
+.table.florida thead th {
+  vertical-align: bottom;
+  border-top:0 none;
+  background:#f7f7f7;
+}
+
+
+.table.florida tbody + tbody {
+  border-top: 2px solid #e5e5e5;
+}
+
+.table-condensed.florida th,
+.table-condensed.florida td {
+  padding: 4px 5px;
+}
+
+.table-bordered.florida {
+  border: 1px solid #e5e5e5;
+  border-collapse: separate;
+  *border-collapse: collapsed;
+  border-left: 0;
+  -webkit-border-radius: 4px;
+	 -moz-border-radius: 4px;
+		  border-radius: 4px;
+}
+
+.table-bordered.florida th,
+.table-bordered.florida td {
+  border-left: 1px solid #e5e5e5;
+  width: 50%; /* custom for Slim */
+}
+
+
+.table.florida tbody tr:hover td,
+.table.florida tbody tr:hover th {
+  background-color: #fcfcfc;
+}
+
+
+
+/* Customized for tables which display two bulleted lists. */
+
+table.florida.two-col-bulleted th {
+	padding-left: 30px;
+}
+
+table.florida.two-col-bulleted ul {
+	margin: 0.5em 0;
+}
+
+table.florida.two-col-bulleted ul li {
+	line-height: 1.5em;
+}
+
+
+/* ---- Control layout for two column paragraphs. ---- */
+
+/* Remember, we assume the user is on a mobile device until we see their browser is
+ *   wide enough to support two-column layout. */
+ 
+/* The immediate children of the .two-col container. */
+.two-col > div {
+}
+
+.two-col-left {
+	padding-bottom: 16px;
+}
+
+section.faq .two-col-left {
+	padding-bottom: 32px;
+}
+
+/* The screen is wide enough for two columns. */
+@media screen and (min-width: 769px) {
+	.two-col > div {
+		width: 50%;
+		box-sizing: border-box;
+		float: left;
+		
+		text-align: justify;
+		
+		padding-bottom: initial; /* cancel */
+	}
+
+	.two-col-left {
+		padding-right: 30px; /* eyeball */
+		padding-bottom: initial; /* cancel */
+	}
+
+	.two-col-right {
+		padding-left: 30px; /* eyeball */
+	}
+}
+
+/* ---- Control layout for a two-column paragraph with only one column. ---- */
+
+.half-col {
+}
+
+
+/* The screen is wide enough for two columns. */
+@media screen and (min-width: 769px) {
+	.half-col {
+		width: 50%;
+		box-sizing: border-box;
+		
+		/* Float is not necessary here. */
+		/* float: left; */
+		
+		text-align: justify;
+		
+		/* Instead, we center. */
+		margin-left: auto;
+		margin-right: auto;
+		
+		/* Extra padding to make this final column the correct width. */
+		/* 20px = 40px (padding each column has) / 2 */
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+
+
+
+
+/* ---- Control layout for three column paragraphs. ---- */
+
+/* Remember, we assume the user is on a mobile device until we see their browser is
+ *   wide enough to support three-column layout. */
+
+#three-steps {
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* The immediate children of the .three-col container. */
+.three-col > div {
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+
+/* The screen is wide enough for two columns. */
+@media screen and (min-width: 877px) {
+	#three-steps {
+		width: initial; /* cancel */
+		margin-left: initial; /* cancel */
+		margin-right: initial; /* cancel */
+	}
+	
+	.three-col > div {
+		width: 33%;
+		box-sizing: border-box;
+		float: left;
+
+		padding-top: initial; /* cancel */
+		padding-bottom: initial; /* cancel */
+		
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+	.three-col > :first-child {
+		padding-left: 0;
+	}
+
+	/* IE8 users will experience a minor visual quirk. (Slightly off-center third column.) */
+	.three-col > :last-child {
+		padding-right: 0;
+	}
+}
+
+
+
+/* ---- Padding for cells ---- */
+section {
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+
+@media screen and (min-width: 769px) {
+	section {
+		padding-top: 32px;
+		padding-bottom: 32px;
+	}
+}
+
+section.no-padding-top {
+	padding-top: 0px;
+}
+
+section.no-padding-bottom {
+	padding-bottom: 0px;
+}
+
+section.no-vertical-padding {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+/* Needs the extra specificity. */
+section.faq h2.green {
+
+	line-height: 110%;
+
+	/* Question Mark "bullet". */
+	background-image: url("../../images/icons-content/h2-question-icon.png");
+	background-repeat: no-repeat;
+	padding-left: 83px; /* 51px (image) + 32 padding */
+	
+	/* Line beneath question. */
+	border-bottom: 1px solid #bed4e0;
+	padding-bottom: 32px;
+	
+	/* Spacing between line and next paragraph. */
+	margin-bottom: 32px;
+}
+
+/* Needs the extra specificity. */
+.section section.faq h2.green {
+	text-align: left;
+}
+
+/* ---- Apply the "micro clearfix hack" to all sections. ---- */
+/* http://nicolasgallagher.com/micro-clearfix-hack/ */
+
+section:before,
+section:after {
+	content: " "; /* 1 */
+	display: table; /* 2 */
+}
+
+section:after {
+	clear: both;
+}
+
+/* ---- Background Color ---- */
+
+section.gray {
+	background-color: #f1f4f9;
+}
+
+section.white {
+	background-color: #ffffff;
+}
+
+
+/* ---- The skyline background ---- */
+
+.section.main {
+	background-color: #ffffff;
+	background-position: left 10% bottom; /* eyeball; Space Needle remains in left of center */
+	background-repeat: no-repeat;
+	
+	padding-top: 20px;
+	padding-bottom: 233px;
+		
+	/* We use PNG so that we can change the background more conveniently.
+	 * Also, the PNG were generally smaller than their JPG equivalents.
+	 */
+	background-position: left 30% bottom;
+}
+
+@media screen and (min-width: 769px) {
+	.section.main {
+		padding-top: 40px;
+		padding-bottom: 400px;
+		
+		background-position: center bottom;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.section.main {
+		padding-top: 40px;
+	
+		background-position: center bottom;
+	}
+}
+
+/* ---- Two-sectioned dashed CTA ---- */
+
+/* Custom breakpoint. */
+/* min-width defined as "max-width of .cta_container, plus double margin */
+@media (min-width: 532px) and (max-width: 992px) {
+	.cta_container {
+		/* eyeball */
+		max-width: 500px;
+		
+		/* Yes, please ignore rwd-360px.css in this instance. */
+		margin-left: auto !important; 
+		margin-right: auto !important;
+	}
+}
+
+.call_to_action {
+    padding: 13px;
+    border: 1px dashed #d1d1d1;
+}
+
+.call_to_action .questions {
+    color: #7b7b7b;
+    font-family: 'Roboto';
+    font-size: 37px;
+    line-height: 47px;
+    font-weight: 500;
+    text-align: center;
+    display: block;
+}
+
+.call_to_action .speak_with {
+    color: #7b7b7b;
+    font-family: 'Roboto';
+    font-size: 34px;
+    line-height: 44px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}
+
+.call_to_action .speak_with strong {
+    font-weight: bolder;
+}
+
+.call_to_action .click_to_call {
+    color: #ffffff;
+    font-family: 'Roboto';
+    font-size: 17px;
+    line-height: 17px;
+    text-align: left;
+    display: table;
+    margin: auto auto;
+    min-width: 147px;
+    max-height: 38px;
+    padding: 11px 15px;
+    background-image: url(../../images/button-icon-phone.png);
+    background-repeat: no-repeat;
+    background-position: right 4px center;
+    border-radius: 99px;
+}
+
+@media (max-width: 991px) {
+	.call_to_action .click_to_call {
+		margin: 1em auto;
+	}
+}
+
+.call_to_action .click_to_call a {
+    text-decoration: none;
+    width: 100%;
+}
+
+.call_to_action .phone_number {
+    color: #7b7b7b;
+    font-family: 'Roboto';
+    font-size: 47px;
+    line-height: 47px;
+    text-align: center;
+    display: table;
+    margin: auto auto;
+}
+
+.call_to_action .half {
+    box-sizing: border-box;
+    position: relative;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@media (min-width: 992px) {
+	.call_to_action .half {
+		float: left;
+		width: 50%;
+	}
+	
+	.call_to_action .half:first-child {
+    	border-right: 1px solid #cdcdcd;
+	}
+}
+
+.call_to_action .clear {
+	display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    clear: both;
+}

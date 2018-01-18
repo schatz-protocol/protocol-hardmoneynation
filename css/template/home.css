@@ -1,0 +1,30 @@
+/* ---- the_content ---- */
+
+.the_content {
+	text-align: center;
+	
+	padding-left: 16px;
+	padding-right: 16px;
+	
+	font-weight: 300;
+}
+
+@media screen and (min-width: 769px) {
+	.the_content {
+		padding-left: 82px;
+		padding-right: 82px;
+	}
+}
+
+@media screen and (min-width: 1281px) {
+	.the_content {
+		max-width: 1116px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.section.main .the_content h2 {
+	font-weight: 300;
+	font-size: 35px;
+}

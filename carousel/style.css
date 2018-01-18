@@ -1,0 +1,183 @@
+/* ---- The boxes containing the form steps ---- */
+
+#protocol_carousel {
+    padding-top: 60px;
+}
+
+.section.main .pseudo-step {
+	border: 1px solid #e1e1e1;
+	background-color: #ffffff;
+	
+	box-sizing: border-box;
+	padding: 14px;
+	
+	/* customization 2017-02-23 */
+	margin-left: 16px;
+	margin-right: 16px;
+	border-radius: 4px;
+}
+
+/* At this point, we don't want the box stretching across the screen. */
+@media screen and (min-width: 562px) {
+	.section.main .pseudo-step {
+		width: 528px;
+		margin-left: auto;
+		margin-right: auto;
+		
+		border-radius: 4px;
+		
+	}
+}
+
+@media screen and (min-width: 769px) {
+	.section.main .pseudo-step {
+		padding: 32px;
+	}
+}
+
+@media screen and (min-width: 1281px) {
+	.section.main .pseudo-step {
+	}
+}
+
+
+
+
+
+/* ---- The pseudo-form itself ---- */
+
+/* We hide the entire Gravity Form footer.
+ * We're building our own. */
+#protocol_carousel .gform_footer {
+	display: none;
+}
+
+/* ---- The pseudo-form input elements ---- */
+
+#protocol_carousel label {
+	font-weight: 600;
+	display: block;
+	margin-bottom: 8px;
+}
+
+/* Stretch dropdown menus to 100% of pseudo-form width. */
+#protocol_carousel select {
+	width: 100%;
+	/* Setting a background color here is ignored by Chrome and causes
+	 *   Firefox to switch to a less-appealing select box.
+	 */
+	 
+	/* Styling dropdown menus is hard. They look different on each browser. */
+	font-size: 14px;
+}
+
+/* Stretch text inputs to ~100% of pseudo-form width. */
+#protocol_carousel input,
+#protocol_carousel textarea {
+	/* Not sure why 100% doesn't work. */
+	width: 98%; /* kludge */
+}
+
+#protocol_carousel input.half-input {
+	width: 46%; /* another kludge */
+}
+
+#protocol_carousel .table-like {
+	display: table;
+}
+#protocol_carousel .table-like > div {
+	display: table-row;
+}
+#protocol_carousel .table-like > div > span {
+	display: table-cell;
+}
+#protocol_carousel .table-like > div > span:first-child {
+	padding-right: 10px;
+}
+
+
+/* ---- The pseudo-form error messages ---- */
+
+/* Hide error messages. */
+/* They are show()'d via jQuery. */
+#protocol_carousel .error {
+	background-color: #ffffcc;
+	display: none;
+}
+
+/* ---- The pseudo-form buttons ---- */
+
+#protocol_carousel .buttons {
+	padding-top: 16px;
+}
+
+/* The font of the buttons. */
+#protocol_carousel .previous_button,
+#protocol_carousel .next_button,
+#protocol_carousel .submit_button {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    
+    border-radius: 4px;
+    padding: 10px;
+    border: 0;
+}
+
+/* Specifically the previous button(s). */
+#protocol_carousel .previous_button {
+	background-color: #ffffff;
+    color: #959595;
+    border: 1px solid #e1e1e1;
+    width: 30%;
+}
+
+/* On smaller page widths, hide the larger button. */
+@media screen and (max-width: 528px) {
+	#protocol_carousel .previous_button.larger {
+		display: none;
+	}
+}
+
+/* On larger page widths, hide the smaller button. */
+@media screen and (min-width: 529px) {
+	#protocol_carousel .previous_button.smaller {
+		display: none;
+	}
+}
+
+/* Specifically the next/submit buttons. */
+#protocol_carousel .next_button,
+#protocol_carousel .submit_button {
+    color: #ffffff;
+    width: 60%;
+    
+    /* TODO: this doesn't seem right, on its own. */
+    float: right;
+}
+
+/* For the first step, make the next button larger. */
+#protocol_carousel .next_button.longer {
+    width: 100%;
+}
+
+/* ---- Communication Consent (for Veristone Mortgage) ---- */
+
+.communication_consent {
+	text-align: center;
+	font-weight: 400;
+	margin-left: 10%;
+	margin-right: 10%;
+	
+	/* Make the font a little smaller. */
+	font-size: 0.8em;
+	
+	padding-top: 16px;
+}
+
+.communication_consent a {
+    color: #6bab0e;
+    text-decoration: none;
+    outline: 0;
+}
